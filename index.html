@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="mainScripts.js"></script>
+    <title>DavinciConverter</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Davinci-Converter</a>
+    </nav>
+    <main role="main" class="container">
+    
+      <div class="jumbotron topSeperator">
+        <h1 class="display-3">ADD FILES</h1>
+        <p class="lead">Add the Files you want to convert for your Davinci Project. At the moment, filenames are not allowed to include spaces.</p>
+        <hr class="my-4">
+        <p class="lead">
+          <button class="btn btn-primary btn-lg btn-block" onclick="clicked();">Open</button>
+          <button class="btn btn-primary btn-lg btn-block" onclick="loader();">Convert</button>
+        </p>
+        <div id="loading" class="d-flex justify-content-center"></div>
+      </div>
+
+      <div id = "files"></div>
+
+    </main><!-- /.container --> 
+    
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>
