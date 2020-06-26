@@ -1,10 +1,18 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "davinci-linux-converter",
+  "version": "0.1.0",
+  "description": "Simple converter for linux to use film files in davinci resolve",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "davinci-linux-converter",
+    "mac": {
+      "category": "tools"
+    }
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -17,7 +25,8 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^9.0.5"
+    "electron": "9.0.5",
+    "electron-builder": "^22.7.0"
   },
   "dependencies": {
     "sync-exec": "^0.6.2"
