@@ -29,7 +29,7 @@ async function loader() {
 
 async function convert() {
     for(var i = 0; i < files.length; i++) {
-        var script = 'ffmpeg -i '+files[i]["path"]+' -c:v dnxhd -profile:v dnxhr_hq -pix_fmt yuv422p -c:a pcm_s16le '+files[i]["path"]+'.mov'
+        var script = `ffmpeg -i "${files[i]["path"]}" -c:v dnxhd -profile:v dnxhr_hq -pix_fmt yuv422p -c:a pcm_s16le "${files[i]["path"]}.mov"`
         console.log(script)
         await execSync(script);
         console.log("finish");
